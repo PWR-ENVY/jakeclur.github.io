@@ -60,8 +60,8 @@ document.getElementById("th").onclick=()=>{const r=document.documentElement;cons
 
 
 /* ---- Feedback: where "send" mode delivers. Set ONE of these (leave both empty to use the phone share sheet / copy). ---- */
-const FEEDBACK_EMAIL="";   // e.g. "you@example.com" opens the person's email app addressed to you
-const FEEDBACK_FORM="";    // e.g. a Google Form link; the message is copied so they can paste it in
+const FEEDBACK_EMAIL="Jakeclur1@gmail.com";   // e.g. "you@example.com" opens the person's email app addressed to you
+const FEEDBACK_FORM="https://docs.google.com/forms/d/e/1FAIpQLSc4UPsdfXsty1ZS-HWWL29H22tIC8DDre3dA876eQKtZ9HH0Q/viewform";    // e.g. a Google Form link; the message is copied so they can paste it in
 function sendMode(){const $=id=>document.getElementById(id);$("fform").style.display="block";$("fpost").textContent="Send feedback";
  $("fpost").onclick=async()=>{const t=$("ftx").value.trim(),n=$("fnm").value.trim();if(!t){return}const body=(n?n+": ":"")+t,m=x=>{$("fmsg").textContent=x};
   if(FEEDBACK_EMAIL){location.href="mailto:"+FEEDBACK_EMAIL+"?subject="+encodeURIComponent("Year Ten site feedback")+"&body="+encodeURIComponent(body);m("Opening your email app…");return}
